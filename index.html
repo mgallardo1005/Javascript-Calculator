@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Javascript Calculator</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="calculator.css">
+</head>
+
+<div class="container-fluid">
+    
+<nav class= "navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand">Java Calculator</a>
+    </div>
+     <ul class="nav navbar-nav navbar-right">
+     <li><a href="https://codepen.io/myk1005/" target="-blank"><span class="glyphicon glyphicon-user"></span> Michael Gallardo</a></li>
+     </ul>
+</nav> 
+
+<body>
+    
+ <div id = "calculator">  
+    <h4 class="heading">Electronic Calculator</h4>
+  <form>
+   <input type="text" id="display" disabled>
+    <br>
+   <input type="button" class="red" value="C" id='keys' onclick='toScreen("allClear")' > <!-- this button will clear all. this is set up so that when this button is pressed, run the onclick function -->
+   <input type="button" class="red" value="CE" id='keys' onclick='backspace()'> <!-- this button will backspace -->
+   <input type="button" value="/" id='keys' onclick='toScreen("/")'> <!-- this button will divide -->
+   <input type="button" value="x" id='keys' onclick='toScreen("*")'> <!-- this button will multiply -->
+    <br>
+   <input type="button" value="9" id='keys' onclick='toScreen("9")'> <!--These buttons when clicked will run the function with the arguments given. So, this button will run the toScreen function with argument '9' -->
+   <input type="button" value="8" id='keys' onclick='toScreen("8")'> 
+   <input type="button" value="7" id='keys' onclick='toScreen("7")'> 
+   <input type="button" value="+" id='keys' onclick='toScreen("+")'> <!-- this button will add -->
+    <br>
+   <input type="button" value="6" id='keys' onclick='toScreen("6")'> 
+   <input type="button" value="5" id='keys' onclick='toScreen("5")'> 
+   <input type="button" value="4" id='keys' onclick='toScreen("4")'> 
+   <input type="button" value="-" id='keys' onclick='toScreen("-")'> <!-- this button will subtract -->
+    <br>
+   <input type="button" value="3" id='keys' onclick='toScreen("3")'>
+   <input type="button" value="2" id='keys' onclick='toScreen("2")'>
+   <input type="button" value="1" id='keys' onclick='toScreen("1")'>
+   <input type="button" value="0" id='zero' onclick='toScreen("0")'>
+   <input type="button" value="." id='keys' onclick='toScreen(".")'> <!-- this button is decimal -->
+   <input type="button" value='=' id='equals' onclick='answer()'>
+  </form>
+ </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="calculator.js"></script>
+
+</body>
+  
+<footer class="text-center footer">Michael Gallardo copyright 2017 All Rights Reserved
+  <div class="text-center">
+    <a href="https://www.facebook.com/michael.gallardo.140" target="_blank"><i class="fa fa-facebook-square" style="font-size:30px; color:rgb(0, 115, 255);"></i></a>
+    <a href="https://www.linkedin.com/in/michael-gallardo-841b3685/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:30px; color:rgb(0, 75, 255)"></i></a>
+    <a href="https://github.com/mgallardo1005" target="_blank"><i class="fa fa-github" style="font-size:30px; color:white"></i></a>
+  </div>
+</footer>
+  
+</div>
+
+</html>
